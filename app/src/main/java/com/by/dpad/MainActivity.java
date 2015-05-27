@@ -18,14 +18,14 @@ import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-    private ImageView oval;
+    private CustomView oval;
     private Button up, down, left, right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        oval = (ImageView) findViewById(R.id.oval);
+        oval = (CustomView) findViewById(R.id.oval);
         oval.setScaleType(ImageView.ScaleType.MATRIX);
 
         up = (Button) findViewById(R.id.up);
@@ -64,27 +64,21 @@ public class MainActivity extends Activity {
 
     private class DpadListener implements View.OnClickListener {
         public void onClick(View v) {
-            RelativeLayout.LayoutParams mParams = (RelativeLayout.LayoutParams) oval.getLayoutParams();
             switch (v.getId()) {
                 case R.id.up: {
-                    mParams.topMargin -= 50;
-                    oval.setLayoutParams(mParams);
+                    oval.up();
                     break;
                 }
                 case R.id.down: {
-                    mParams.topMargin += 50;
-                    oval.setLayoutParams(mParams);
+                    oval.down();
                     break;
                 }
                 case R.id.left: {
-
-                    mParams.leftMargin -= 50;
-                    oval.setLayoutParams(mParams);
+                    oval.right();
                     break;
                 }
                 case R.id.right: {
-                    mParams.leftMargin += 50;
-                    oval.setLayoutParams(mParams);
+                    oval.left();
                     break;
                 }
             }
