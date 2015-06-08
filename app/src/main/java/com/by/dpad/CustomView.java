@@ -53,12 +53,12 @@ public class CustomView extends ImageView {
         canvas.drawCircle(x,y, circleradius, paint);
     }
 
-    public void left() {
+    public void right() {
         x += indent;
         invalidate();
     }
 
-    public void right() {
+    public void left() {
         x -= indent;
         invalidate();
     }

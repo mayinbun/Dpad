@@ -9,7 +9,7 @@
     <com.by.dpad.CustomView
         android:id="@+id/oval"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:scaleType="matrix"
         android:background="@color/accent_material_light"/>
 

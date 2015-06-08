@@ -8,12 +8,6 @@
 
 
     <include layout="@layout/content_view" />
-
     <include layout="@layout/dpad_view" />
-
-
-
-
-
 
 </LinearLayout>

@@ -74,11 +74,11 @@ public class MainActivity extends Activity {
                     break;
                 }
                 case R.id.left: {
-                    oval.right();
+                    oval.left();
                     break;
                 }
                 case R.id.right: {
-                    oval.left();
+                    oval.right();
                     break;
                 }
             }
